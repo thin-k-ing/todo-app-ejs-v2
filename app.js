@@ -12,7 +12,12 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todoDB");
+const password = "hT8UGVBBV7Rbji8";
+mongoose.connect(
+	"mongodb+srv://thin_k_ing:" +
+		password +
+		"@cluster0.oodhy.mongodb.net/todoAppDB"
+);
 
 const todoSchema = {
 	name: {
